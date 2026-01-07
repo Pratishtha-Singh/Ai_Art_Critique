@@ -1,0 +1,7 @@
+text_sample_size: 10000
+image_sample_size: 5000
+
+# Critique generation parameters
+index_path: "c:/Users/Pratishtha Singh/OneDrive/Desktop/Projects/Ai Art critic/art_embeddings.index"
+metadata_path: "c:/Users/Pratishtha Singh/OneDrive/Desktop/Projects/Ai Art critic/art_metadata.json"
+query: "Critique an artwork similar to Van Gogh's style"

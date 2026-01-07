@@ -1,0 +1,6 @@
+ipython>=8.10
+jupyterlab>=3.0
+notebook
+kedro~=1.0.0
+huggingface-hub>=0.15.0
+pyarrow>=10.0.0

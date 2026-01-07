@@ -1,0 +1,41 @@
+# Here you can define all your datasets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+Artemis:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/artemis.csv
+
+WikiArt:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/wikiart.csv
+
+MetMuseum:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/metmuseum.csv
+
+unified_art_dataset:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/unified_art_dataset.csv
+
+embedded_art_dataset:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/embedded_art_dataset.csv
+
+huggingface_dataset:
+  type: ai_art_critic.datasets.HuggingFaceDataset
+  dataset: huggan/wikiart
+  sample_size: 1000
+  max_files: 5
+
+art_embeddings_index:
+  type: ai_art_critic.datasets.FaissIndexDataset
+  filepath: data/05_model_input/art_embeddings.index
+
+art_metadata:
+  type: json.JSONDataset
+  filepath: data/05_model_input/art_metadata.json
+
+critique_result:
+  type: json.JSONDataset
+  filepath: data/06_models/critique_result.json
